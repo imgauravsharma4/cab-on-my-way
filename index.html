@@ -8,7 +8,15 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
-        margin: 50px;
+        margin: 0px;
+        padding: 0;
+        position: relative;
+      }
+      a, h1 {
+        color: #ffffff;
+      }
+      p {
+        margin: 0;
       }
 
       #loader {
@@ -32,6 +40,21 @@
         animation: rotation 1s linear infinite;
       }
 
+      .banner {
+        background: linear-gradient(#000000b0, #000000b0),
+          url("https://images.unsplash.com/photo-1513978246846-a03516f340e1?q=80&w=2146&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        height: calc(100vh);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
       @keyframes rotation {
         0% {
           transform: rotate(0deg);
@@ -43,11 +66,23 @@
     </style>
   </head>
   <body>
-    <div id="loader">
-      <span class="loader"></span>
-    </div>
-    <p id="error-message"></p>
+    <div class="banner">
+      <div>
+        <h1><strong>CAB ON WAY</strong></h1>
+        <div id="loader">
+          <span class="loader"></span>
+        </div>
+        <p id="error-message"></p>
 
+      </div>
+
+      <footer>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/about-us.html">About Us</a>
+        <a href="/refund.html">Refund Policy</a>
+        <a href="/term.html">Terms And Conditions</a>
+      </footer>
+    </div>
     <script>
       const apiToken =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyNSwibmFtZSI6ImNlcHF3YSIsIm1vYmlsZSI6Ijk5OTk5OTk5OTkiLCJlbWFpbCI6Iml2cGRwbiIsImdlbmRlciI6Ik5VTEwiLCJwcm9maWxlSW1hZ2UiOm51bGwsInBhc3N3b3JkIjoiJDJhJDEyJE55Q0t4Y2M0UThNNWhaRHQzTEcyNy5HQUs3Vmh6Zndlcm41SHdjczg0blRsWkhiQlUxR3h5IiwiaXNBY3RpdmUiOnRydWUsImlzVmVyaWZpZWQiOnRydWUsImNyZWF0ZWRBdCI6IjIwMjQtMTAtMjlUMDU6MzU6MDIuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjQtMTEtMTZUMDA6NDg6NTUuMDAwWiJ9LCJpYXQiOjE3MzMzODk5MzB9.JSqI2RLltN6ClbpWXkGLzyPVQhYhiZj8YcY76B99rGw"; // Replace with your dynamic token
